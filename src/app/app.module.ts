@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar.component';
-import { UserListComponent } from './users/user-list.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 
 import {UserService} from './shared/user.service'
 

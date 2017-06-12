@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core'
 @Injectable()
 export class UserService{
     getUsers(){
-        return USERS;
+        return USERS; 
     }
 
    
@@ -11,6 +11,7 @@ export class UserService{
 
  const USERS=[{
         name:"pablo"
-    },{
+    },
+    {
         name:"usuario2"
     }]
