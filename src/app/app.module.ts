@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar.component';
 import { UserListComponent } from './users/user-list.component';
 
+import {UserService} from './shared/user.service'
+
 const appRoutes: Routes = [
   { path: 'users', component: UserListComponent },
    { path: '' ,redirectTo: '/users',pathMatch: 'full'
@@ -29,7 +31,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core'
+import{UserService} from '../shared/user.service'
 
 
 @Component({
@@ -7,5 +8,11 @@ import {Component} from '@angular/core'
 })
 
 export class UserListComponent{
+
+users: any;
+
+   constructor(private userService: UserService){
+       this.users=userService.getUsers();
+   }
  
 }
