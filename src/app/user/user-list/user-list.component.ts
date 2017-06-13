@@ -4,7 +4,7 @@ import{UserService} from 'app/shared/user.service'
 
 @Component({
     templateUrl:'./user-list.component.html',
-    selector:'userslist'
+    selector:'users-list'
 })
 
 export class UserListComponent{

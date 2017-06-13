@@ -6,15 +6,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar.component';
-import { UserListComponent } from './users/user-list/user-list.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserThumbnailComponent } from './user/user-thumbnail/user-thumbnail.component';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 import {UserService} from './shared/user.service'
 
 const appRoutes: Routes = [
   { path: 'users', component: UserListComponent },
-   { path: '' ,redirectTo: '/users',pathMatch: 'full'
-  },
- 
+  { path: 'user/:id', component: UserDetailComponent },
+  { path: '' ,redirectTo: '/users',pathMatch: 'full'} 
 ];
 
 
@@ -23,7 +24,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserListComponent
+    UserListComponent,
+    UserDetailComponent,
+    UserThumbnailComponent
+    
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
